@@ -1,0 +1,12 @@
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\bin\Debug\net9.0\infrastructure.deps.json
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\bin\Debug\net9.0\infrastructure.dll
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\bin\Debug\net9.0\infrastructure.pdb
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.AssemblyInfoInputs.cache
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.AssemblyInfo.cs
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.sourcelink.json
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.dll
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\refint\infrastructure.dll
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.pdb
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\ref\infrastructure.dll
