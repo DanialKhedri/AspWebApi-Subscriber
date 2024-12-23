@@ -10,3 +10,4 @@ D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure
 D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\refint\infrastructure.dll
 D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.pdb
 D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\ref\infrastructure.dll
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.csproj.AssemblyReference.cache

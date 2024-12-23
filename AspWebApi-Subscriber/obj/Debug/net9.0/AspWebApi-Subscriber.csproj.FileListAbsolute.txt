@@ -39,3 +39,6 @@ D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\refint\A
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.pdb
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.genruntimeconfig.cache
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\ref\AspWebApi-Subscriber.dll
+D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
