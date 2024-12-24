@@ -12,7 +12,7 @@ public class DataContext : DbContext
     }
 
 
-    public DbSet<DataPoint> DataPoints { get; set; }
+    public DbSet<DataRecord> DataRecords { get; set; }
 
 
 }

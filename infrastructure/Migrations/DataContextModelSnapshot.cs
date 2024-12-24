@@ -22,7 +22,7 @@ namespace infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.DataPoint", b =>
+            modelBuilder.Entity("Domain.Entities.DataRecord", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,19 +30,42 @@ namespace infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("DataPoint10Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint1Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint2Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint3Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint4Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint5Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint6Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint7Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint8Value")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DataPoint9Value")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.ToTable("DataPoints");
+                    b.ToTable("DataRecords");
                 });
 #pragma warning restore 612, 618
         }

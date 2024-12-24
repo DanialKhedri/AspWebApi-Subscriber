@@ -1,178 +1,241 @@
-﻿using Application.DTOs.Data;
+﻿#region Usings
+using Application.DTOs.Data;
 using Domain.Entities;
-using infrastructure.Data; 
+using infrastructure.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using System.Linq;
 using System.Text;
+#endregion
 
-namespace MyProject.Infrastructure.RabbitMQ
+namespace MyProject.Infrastructure.RabbitMQ;
+
+public class RabbitMQMessageBroker : IHostedService
 {
-    public class RabbitMQMessageBroker : IHostedService
+    #region Ctor
+    private readonly string _hostname = "localhost";  // آدرس RabbitMQ
+    private readonly string _queueName = "dataQueue"; // نام صف
+    private readonly ILogger<RabbitMQMessageBroker> _logger;
+    private IConnection _connection;
+    private IChannel _channel;
+    private AsyncEventingBasicConsumer _consumer;
+    private readonly IServiceScopeFactory _serviceScopeFactory; // برای دسترسی به DbContext
+
+    // برای ذخیره داده‌ها در حافظه به صورت تجمعی
+    private readonly List<DataPointPublishDTO> _dataBuffer = new List<DataPointPublishDTO>();
+
+    // تایمر برای ذخیره داده‌ها هر یک دقیقه
+    private Timer _timer;
+    private const int _minuteInterval = 60 * 1000; // 1 دقیقه (در میلی‌ثانیه)
+
+
+
+
+    public RabbitMQMessageBroker(ILogger<RabbitMQMessageBroker> logger, IServiceScopeFactory serviceScopeFactory)
     {
-        private readonly string _hostname = "localhost";  // آدرس RabbitMQ (نام سرویس RabbitMQ در Docker Compose)
-        private readonly string _queueName = "dataQueue"; // نام صف
-        private readonly ILogger<RabbitMQMessageBroker> _logger;
-        private IConnection _connection;
-        private IChannel _channel;
-        private AsyncEventingBasicConsumer _consumer;
-        private readonly IServiceScopeFactory _serviceScopeFactory; // برای ایجاد scope و دسترسی به DbContext
+        _logger = logger;
+        _serviceScopeFactory = serviceScopeFactory;
+    }
+    #endregion
 
-      
-        public RabbitMQMessageBroker(ILogger<RabbitMQMessageBroker> logger, IServiceScopeFactory serviceScopeFactory)
+
+    // متد برای شروع RabbitMQ
+    public async Task StartAsync(CancellationToken cancellationToken)
+    {
+        try
         {
-            _logger = logger;
-            _serviceScopeFactory = serviceScopeFactory;
-        }
+            // تلاش برای اتصال به RabbitMQ
+            _logger.LogInformation("Starting RabbitMQ connection...");
+            await ConnectToRabbitMQ();
 
-        // متد برای شروع RabbitMQ
-        public async Task StartAsync(CancellationToken cancellationToken)
-        {
-            try
+            // بررسی اینکه آیا کانال به درستی مقداردهی شده است یا خیر
+            if (_channel == null)
             {
-                // تلاش برای اتصال به RabbitMQ
-                _logger.LogInformation("Starting RabbitMQ connection...");
-                await ConnectToRabbitMQ();
-
-                // بررسی اینکه آیا کانال به درستی مقداردهی شده است یا خیر
-                if (_channel == null)
-                {
-                    _logger.LogError("Channel is null. Cannot start consuming messages.");
-                    return;
-                }
-
-                // ایجاد consumer برای دریافت پیام‌ها
-                _consumer = new AsyncEventingBasicConsumer(_channel);
-
-                _consumer.ReceivedAsync += async (model, ea) =>
-                {
-                    _logger.LogInformation("Message received from RabbitMQ.");
-                    var body = ea.Body.ToArray();
-                    var message = Encoding.UTF8.GetString(body);
-
-                    await ProcessMessageAsync(message, cancellationToken);
-                };
-
-                // شروع به دریافت پیام‌ها از صف
-                await _channel.BasicConsumeAsync(queue: _queueName, autoAck: true, consumer: _consumer);
-                _logger.LogInformation("RabbitMQ Service started and listening for messages.");
+                _logger.LogError("Channel is null. Cannot start consuming messages.");
+                return;
             }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error starting RabbitMQ service: {ex.Message}");
-            }
-        }
 
-        // متد برای توقف RabbitMQ
-        public Task StopAsync(CancellationToken cancellationToken)
-        {
-            try
-            {
-                _channel?.CloseAsync();
-                _connection?.CloseAsync();
-                _logger.LogInformation("RabbitMQ Service stopped.");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error stopping RabbitMQ service: {ex.Message}");
-            }
-            return Task.CompletedTask;
-        }
+            // ایجاد consumer برای دریافت پیام‌ها
+            _consumer = new AsyncEventingBasicConsumer(_channel);
 
-        // متد برای اتصال به RabbitMQ با استفاده از retry logic
-        private async Task ConnectToRabbitMQ()
-        {
-            var factory = new ConnectionFactory()
+            _consumer.ReceivedAsync += async (model, ea) =>
             {
-                HostName = _hostname,
-                Port = 5672,
+                _logger.LogInformation("Message received from RabbitMQ.");
+                var body = ea.Body.ToArray();
+                var message = Encoding.UTF8.GetString(body);
+
+                await ProcessMessageAsync(message, cancellationToken);
             };
 
-            int retryCount = 5;
+            // شروع به دریافت پیام‌ها از صف
+            await _channel.BasicConsumeAsync(queue: _queueName, autoAck: true, consumer: _consumer);
+            _logger.LogInformation("RabbitMQ Service started and listening for messages.");
 
-            while (retryCount > 0)
-            {
-                try
-                {
-                    _logger.LogInformation("Attempting to connect to RabbitMQ...");
-                    _connection = await factory.CreateConnectionAsync();
-                    _logger.LogInformation("Connection to RabbitMQ established.");
-
-                    // ایجاد کانال
-                    _channel = await _connection.CreateChannelAsync();
-                    _logger.LogInformation("Channel created successfully.");
-
-                    // اعلام صف
-                    await _channel.QueueDeclareAsync(
-                        queue: _queueName,
-                        durable: false,
-                        exclusive: false,
-                        autoDelete: false,
-                        arguments: null);
-                    _logger.LogInformation("Queue declared successfully.");
-
-                    return; // موفقیت‌آمیز
-                }
-                catch (Exception ex)
-                {
-                    retryCount--;
-                    _logger.LogError($"Failed to connect to RabbitMQ. Retries left: {retryCount}. Error: {ex.Message}");
-                    if (retryCount == 0) throw;
-                    await Task.Delay(5000); // Retry after 5 seconds
-                }
-            }
+            // تنظیم تایمر برای ذخیره داده‌ها هر یک دقیقه
+            _timer = new Timer(SaveDataToDatabase, null, _minuteInterval, _minuteInterval);
         }
-
-        // متد برای پردازش پیام‌های دریافتی
-        public async Task ProcessMessageAsync(string message, CancellationToken cancellationToken)
+        catch (Exception ex)
         {
-            _logger.LogInformation($"Received message: {message}");
+            _logger.LogError($"Error starting RabbitMQ service: {ex.Message}");
+        }
+    }
 
+
+    // متد برای توقف RabbitMQ
+    public Task StopAsync(CancellationToken cancellationToken)
+    {
+        try
+        {
+            _channel?.CloseAsync();
+            _connection?.CloseAsync();
+            _logger.LogInformation("RabbitMQ Service stopped.");
+
+            // متوقف کردن تایمر هنگام توقف سرویس
+            _timer?.Dispose();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError($"Error stopping RabbitMQ service: {ex.Message}");
+        }
+        return Task.CompletedTask;
+    }
+
+
+    // متد برای اتصال به RabbitMQ با استفاده از retry logic
+    private async Task ConnectToRabbitMQ()
+    {
+        var factory = new ConnectionFactory()
+        {
+            HostName = _hostname,
+            Port = 5672,
+        };
+
+        int retryCount = 5;
+
+        while (retryCount > 0)
+        {
             try
             {
-                // تبدیل پیام JSON به لیستی از DataPoint
-                var dataPoints = JsonConvert.DeserializeObject<List<DataPointPublishDTO>>(message);
+                _logger.LogInformation("Attempting to connect to RabbitMQ...");
+                _connection = await factory.CreateConnectionAsync();
+                _logger.LogInformation("Connection to RabbitMQ established.");
 
-                if (dataPoints != null && dataPoints.Any())
-                {
-                    using (var scope = _serviceScopeFactory.CreateScope()) // ایجاد scope جدید
-                    {
-                        var context = scope.ServiceProvider.GetRequiredService<DataContext>(); // دریافت DbContext از DI
+                // ایجاد کانال
+                _channel = await _connection.CreateChannelAsync();
+                _logger.LogInformation("Channel created successfully.");
 
+                // اعلام صف
+                await _channel.QueueDeclareAsync(
+                    queue: _queueName,
+                    durable: false,
+                    exclusive: false,
+                    autoDelete: false,
+                    arguments: null);
+                _logger.LogInformation("Queue declared successfully.");
 
-
-                        foreach (var dataPoint in dataPoints)
-                        {
-                            _logger.LogInformation($"Processing DataPoint: Name={dataPoint.Name}, Value={dataPoint.Value}, Time={dataPoint.Time}");
-                            // ایجاد شیء DataPoint جدید
-                            DataPoint dataPoint1 = new DataPoint()
-                            {
-                                Name = dataPoint.Name,
-                                Time = dataPoint.Time,
-                                Value = dataPoint.Value,
-                            };
-
-                            // ذخیره داده در دیتابیس
-                            await context.DataPoints.AddAsync(dataPoint1, cancellationToken);
-                            // ایجاد scope برای دسترسی به DbContext
-                            _logger.LogInformation($"DataPoint saved to database: {dataPoint1.Name}");
-                        }               
-                        await context.SaveChangesAsync(cancellationToken);
-                    }
-                  
-                }
-                else
-                {
-                    _logger.LogWarning("Received an empty or invalid message.");
-                }
+                return; // موفقیت‌آمیز
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error processing message: {ex.Message}");
+                retryCount--;
+                _logger.LogError($"Failed to connect to RabbitMQ. Retries left: {retryCount}. Error: {ex.Message}");
+                if (retryCount == 0) throw;
+                await Task.Delay(5000); // Retry after 5 seconds
             }
         }
     }
+
+
+    // متد برای پردازش پیام‌های دریافتی
+    public async Task ProcessMessageAsync(string message, CancellationToken cancellationToken)
+    {
+        _logger.LogInformation($"Received message: {message}");
+
+        try
+        {
+            // تبدیل پیام JSON به لیستی از DataPoint
+            var dataPoints = JsonConvert.DeserializeObject<List<DataPointPublishDTO>>(message);
+
+            if (dataPoints != null && dataPoints.Any())
+            {
+                // افزودن داده‌ها به بافر
+                lock (_dataBuffer)
+                {
+                    _dataBuffer.AddRange(dataPoints);
+                }
+                _logger.LogInformation($"Added {dataPoints.Count} data points to buffer.");
+            }
+            else
+            {
+                _logger.LogWarning("Received an empty or invalid message.");
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError($"Error processing message: {ex.Message}");
+        }
+    }
+
+
+    // متد برای ذخیره‌سازی داده‌ها در پایگاه‌داده هر یک دقیقه
+    private async void SaveDataToDatabase(object state)
+    {
+        try
+        {
+            List<DataPointPublishDTO> dataToSave = null;
+
+            // قفل کردن بافر داده‌ها و کپی کردن آن برای ذخیره در پایگاه‌داده
+            lock (_dataBuffer)
+            {
+
+                // Get the last 10 items from the buffer
+                dataToSave = new List<DataPointPublishDTO>(_dataBuffer).TakeLast(10).ToList();
+
+                _dataBuffer.Clear();
+            }
+
+            if (dataToSave != null && dataToSave.Any())
+            {
+                using (var scope = _serviceScopeFactory.CreateScope())
+                {
+                    var context = scope.ServiceProvider.GetRequiredService<DataContext>();
+
+                    // ایجاد یک رکورد جدید برای ذخیره‌سازی در دیتابیس
+                    var newDataRecord = new DataRecord() // فرض کنید DataRecord کلاس برای ذخیره چند DataPoint است
+                    {
+                        Time = dataToSave[4].Time,
+
+                        DataPoint1Value = dataToSave[0].Value,
+                        DataPoint2Value = dataToSave[1].Value,
+                        DataPoint3Value = dataToSave[2].Value,
+                        DataPoint4Value = dataToSave[3].Value,
+                        DataPoint5Value = dataToSave[4].Value,
+                        DataPoint6Value = dataToSave[5].Value,
+                        DataPoint7Value = dataToSave[6].Value,
+                        DataPoint8Value = dataToSave[7].Value,
+                        DataPoint9Value = dataToSave[8].Value,
+                        DataPoint10Value = dataToSave[9].Value,
+
+                    };
+
+                    await context.DataRecords.AddAsync(newDataRecord);
+                    _logger.LogInformation($"Data record saved to database at {newDataRecord.Time}");
+                    await context.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                _logger.LogInformation("No new data to save to database.");
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError($"Error saving data to database: {ex.Message}");
+        }
+    }
+
 }

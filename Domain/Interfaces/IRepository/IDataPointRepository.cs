@@ -5,7 +5,7 @@ namespace Domain.Interfaces.IRepository;
 public interface IDataPointRepository
 {
 
-    public Task AddDatapointAsync(DataPoint dataPoint);
+    public Task AddDatapointAsync(DataRecord dataPoint);
 
     public Task SaveChangeAsync();
 

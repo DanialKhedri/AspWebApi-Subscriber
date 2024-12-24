@@ -5,6 +5,33 @@
     {
       "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\messagebroker\\rabbitmqmessagebroker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\messagebroker\\rabbitmqmessagebroker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F367687-F9AF-4278-835D-EB1CF74DAFCB}|Domain\\Domain.csproj|d:\\projects\\asp-webapi-subscriber\\domain\\interfaces\\irepository\\idatapointrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F367687-F9AF-4278-835D-EB1CF74DAFCB}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\irepository\\idatapointrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\repository\\datapointrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\repository\\datapointrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./SubscriberDB/True/SqlTable/dbo.DataRecords.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\migrations\\20241224213555_firtstmig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20241224213555_firtstmig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F367687-F9AF-4278-835D-EB1CF74DAFCB}|Domain\\Domain.csproj|d:\\projects\\asp-webapi-subscriber\\domain\\entities\\datarecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F367687-F9AF-4278-835D-EB1CF74DAFCB}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\datarecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,15 +77,103 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dbo.DataRecords [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/./SubscriberDB/True/SqlTable/dbo.DataRecords.sql",
+              "ToolTip": "dbo.DataRecords [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-24T21:40:36.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IDataPointRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\Domain\\Interfaces\\IRepository\\IDataPointRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IRepository\\IDataPointRepository.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\Domain\\Interfaces\\IRepository\\IDataPointRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IRepository\\IDataPointRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T21:34:44.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "infrastructure\\Data\\DataContext.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Data\\DataContext.cs",
+              "RelativeToolTip": "infrastructure\\Data\\DataContext.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T21:33:26.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RabbitMQMessageBroker.cs",
               "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
               "RelativeDocumentMoniker": "infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
               "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
               "RelativeToolTip": "infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAawL8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T14:23:35.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataPointRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Repository\\DataPointRepository.cs",
+              "RelativeDocumentMoniker": "infrastructure\\Repository\\DataPointRepository.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Repository\\DataPointRepository.cs",
+              "RelativeToolTip": "infrastructure\\Repository\\DataPointRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIA/wBYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T21:35:08.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DataContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "infrastructure\\Migrations\\DataContextModelSnapshot.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeToolTip": "infrastructure\\Migrations\\DataContextModelSnapshot.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T21:36:05.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20241224213555_firtstmig.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Migrations\\20241224213555_firtstmig.cs",
+              "RelativeDocumentMoniker": "infrastructure\\Migrations\\20241224213555_firtstmig.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Migrations\\20241224213555_firtstmig.cs",
+              "RelativeToolTip": "infrastructure\\Migrations\\20241224213555_firtstmig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T21:35:56.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataRecord.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\Domain\\Entities\\DataRecord.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\DataRecord.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\Domain\\Entities\\DataRecord.cs",
+              "RelativeToolTip": "Domain\\Entities\\DataRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T20:49:30.311Z",
               "EditorCaption": ""
             }
           ]

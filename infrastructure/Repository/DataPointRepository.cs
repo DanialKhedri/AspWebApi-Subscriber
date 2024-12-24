@@ -20,25 +20,7 @@ public class DataPointRepository : IDataPointRepository
 
     #endregion
 
-    public async Task AddDatapointAsync(DataPoint dataPoint)
-    {
-
-        try
-        {
-            await _datacontext.DataPoints.AddAsync(dataPoint);
-        }
-        catch
-        {
-
-
-        }
-
-    }
-
-    public async Task SaveChangeAsync()
-    {
-        await _datacontext.SaveChangesAsync();
-    }
+   
 
 
 
