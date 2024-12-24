@@ -1,17 +1,48 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.IRepository;
+using infrastructure.Data;
 
 namespace infrastructure.Repository;
 
 public class DataPointRepository : IDataPointRepository
 {
-    public Task AddDatapointAsync(DataPoint dataPoint)
+
+
+    #region Ctor
+    private readonly DataContext _datacontext;
+
+    public DataPointRepository(DataContext datacontext)
     {
-        throw new NotImplementedException();
+        _datacontext = datacontext;
     }
 
-    public Task SaveChangeAsync()
+
+
+    #endregion
+
+    public async Task AddDatapointAsync(DataPoint dataPoint)
     {
-        throw new NotImplementedException();
+
+        try
+        {
+            await _datacontext.DataPoints.AddAsync(dataPoint);
+        }
+        catch
+        {
+
+
+        }
+
     }
+
+    public async Task SaveChangeAsync()
+    {
+        await _datacontext.SaveChangesAsync();
+    }
+
+
+
+
+
+
 }

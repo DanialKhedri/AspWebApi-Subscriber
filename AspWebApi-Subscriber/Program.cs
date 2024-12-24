@@ -1,15 +1,11 @@
 ﻿using Application.Services.Implements;
 using Application.Services.Interfaces;
-using Application.Utilities.AutoMapper;
 using Domain.Interfaces.IRepository;
-using infrastructure.DataContext;
+using infrastructure.Data;
 using infrastructure.Repository;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using MyProject.Infrastructure.RabbitMQ;
 using Serilog;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +18,16 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 builder.Logging.ClearProviders();  
-builder.Logging.AddSerilog();     
+builder.Logging.AddSerilog();
+
+//Add dbContext
+builder.Services.AddDbContext<DataContext>(option =>
+{
+
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
+
+}
+);
 
 
 // Add services to the container.
@@ -31,11 +36,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ثبت dbContext
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
-});
+
 
 //// AutoMapper
 //builder.Services.AddAutoMapper(typeof(MapperConfig));
