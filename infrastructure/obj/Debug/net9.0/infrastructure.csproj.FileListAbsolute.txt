@@ -11,3 +11,10 @@ D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\refint\infrast
 D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.pdb
 D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\ref\infrastructure.dll
 D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.csproj.AssemblyReference.cache
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\bin\Debug\net9.0\infrastructure.runtimeconfig.json
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\bin\Debug\net9.0\Application.dll
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\bin\Debug\net9.0\Domain.dll
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\bin\Debug\net9.0\Application.pdb
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\bin\Debug\net9.0\Domain.pdb
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastr.D83B591B.Up2Date
+D:\Projects\Asp-WebApi-Subscriber\infrastructure\obj\Debug\net9.0\infrastructure.genruntimeconfig.cache

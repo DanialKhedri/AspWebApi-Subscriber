@@ -1,0 +1,39 @@
+name: dockercompose3860874380921325091
+services:
+  aspwebapi-subscriber:
+    build:
+      context: D:\Projects\Asp-WebApi-Subscriber
+      dockerfile: AspWebApi-Subscriber/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: "5672"
+    image: aspwebapisubscriber
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:management
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 15672
+        published: "15672"
+        protocol: tcp
+      - mode: ingress
+        target: 5672
+        published: "5672"
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose3860874380921325091_default

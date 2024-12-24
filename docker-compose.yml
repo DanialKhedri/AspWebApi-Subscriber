@@ -1,0 +1,9 @@
+services:
+  aspwebapi-subscriber:
+    image: ${DOCKER_REGISTRY-}aspwebapisubscriber
+    build:
+      context: .
+      dockerfile: AspWebApi-Subscriber/Dockerfile
+
+      
+  
