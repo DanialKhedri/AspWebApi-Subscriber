@@ -32,7 +32,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Projects\\Asp-WebApi-Subscriber\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Projects\\Asp-WebApi-Subscriber\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -13,3 +13,6 @@ D:\Projects\Asp-WebApi-Subscriber\Application\obj\Debug\net9.0\ref\Application.d
 D:\Projects\Asp-WebApi-Subscriber\Application\obj\Debug\net9.0\Application.csproj.AssemblyReference.cache
 D:\Projects\Asp-WebApi-Subscriber\Application\bin\Debug\net9.0\Application.runtimeconfig.json
 D:\Projects\Asp-WebApi-Subscriber\Application\obj\Debug\net9.0\Application.genruntimeconfig.cache
+D:\Projects\Asp-WebApi-Subscriber\Application\bin\Debug\net9.0\Domain.dll
+D:\Projects\Asp-WebApi-Subscriber\Application\bin\Debug\net9.0\Domain.pdb
+D:\Projects\Asp-WebApi-Subscriber\Application\obj\Debug\net9.0\Applicat.44B5EDA2.Up2Date

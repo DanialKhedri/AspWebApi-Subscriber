@@ -1,15 +1,21 @@
 [
   {
-    "ContainingType": "AspWebApi_Subscriber.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "AspWebApi_Subscriber.Controllers.UserController",
+    "Method": "LogIn",
+    "RelativePath": "api/User/LogIn",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userLogInDTO",
+        "Type": "Application.DTOs.User.UserLogInDTO.UserLogInDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AspWebApi_Subscriber.WeatherForecast, AspWebApi-Subscriber, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Application.DTOs.User.UserLogInDTO.UserResultLogInDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -17,7 +23,48 @@
         ],
         "StatusCode": 200
       }
+    ]
+  },
+  {
+    "ContainingType": "AspWebApi_Subscriber.Controllers.UserController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/User/RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RefreshToken",
+        "Type": "System.String",
+        "IsRequired": false
+      }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": [
+      {
+        "Type": "Azure.Core.AccessToken",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AspWebApi_Subscriber.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "api/User/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userRegisterDTO",
+        "Type": "Application.DTOs.User.UserRegisterDTO.UserRegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

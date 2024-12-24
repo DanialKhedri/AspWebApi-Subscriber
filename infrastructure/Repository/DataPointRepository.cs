@@ -16,11 +16,21 @@ public class DataPointRepository : IDataPointRepository
         _datacontext = datacontext;
     }
 
+    public Task AddDatapointAsync(DataRecord dataPoint)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task SaveChangeAsync()
+    {
+        throw new NotImplementedException();
+    }
+
 
 
     #endregion
 
-   
+
 
 
 

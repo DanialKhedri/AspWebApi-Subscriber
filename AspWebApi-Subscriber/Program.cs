@@ -1,11 +1,15 @@
 ﻿using Application.Services.Implements;
 using Application.Services.Interfaces;
+using Application.Utilities.AutoMapper;
 using Domain.Interfaces.IRepository;
 using infrastructure.Data;
 using infrastructure.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MyProject.Infrastructure.RabbitMQ;
 using Serilog;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,37 +42,38 @@ builder.Services.AddSwaggerGen();
 
 
 
-//// AutoMapper
-//builder.Services.AddAutoMapper(typeof(MapperConfig));
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
-//// JWT Authentication
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//}).AddJwtBearer(options =>
-//{
-//    options.TokenValidationParameters = new TokenValidationParameters
-//    {
-//        ValidateIssuerSigningKey = true,
-//        ValidateIssuer = true,
-//        ValidateAudience = true,
-//        ValidateLifetime = true,
-//        ClockSkew = TimeSpan.Zero,
-//        ValidIssuer = builder.Configuration["JWTSettings:Issuer"],
-//        ValidAudience = builder.Configuration["JWTSettings:Audience"],
-//        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["JWTSettings:Key"]))
-//    };
-//});
+// JWT Authentication
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidIssuer = builder.Configuration["JWTSettings:Issuer"],
+        ValidAudience = builder.Configuration["JWTSettings:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["JWTSettings:Key"]))
+    };
+});
+
+
 
 // افزودن سرویس‌های RabbitMQ به DI
 builder.Services.AddSingleton<IHostedService, RabbitMQMessageBroker>();
 
 
-builder.Services.AddScoped<IDataPointRepository, DataPointRepository>();
-builder.Services.AddScoped<IDataPointService, DataPointService>();
-
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 var app = builder.Build();
 

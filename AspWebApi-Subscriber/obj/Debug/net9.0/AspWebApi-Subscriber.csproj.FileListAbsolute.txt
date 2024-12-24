@@ -19,7 +19,6 @@ D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebAp
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.AssemblyInfoInputs.cache
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.AssemblyInfo.cs
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.csproj.CoreCompileInputs.cache
-D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.MvcApplicationPartsAssemblyInfo.cs
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.sourcelink.json
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\scopedcss\bundle\AspWebApi-Subscriber.styles.css
@@ -171,3 +170,4 @@ D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\bin\Debug\net9.0\Serilog.
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\bin\Debug\net9.0\Serilog.Sinks.Console.dll
 D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\bin\Debug\net9.0\Serilog.Sinks.File.dll
+D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\obj\Debug\net9.0\AspWebApi-Subscriber.MvcApplicationPartsAssemblyInfo.cs

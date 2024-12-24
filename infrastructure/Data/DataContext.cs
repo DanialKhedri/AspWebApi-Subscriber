@@ -13,6 +13,6 @@ public class DataContext : DbContext
 
 
     public DbSet<DataRecord> DataRecords { get; set; }
-
+    public DbSet<User> Users { get; set; }
 
 }
