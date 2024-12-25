@@ -2,6 +2,7 @@
 using Application.DTOs.Data;
 using Domain.Entities;
 using infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -17,22 +18,18 @@ namespace MyProject.Infrastructure.RabbitMQ;
 public class RabbitMQMessageBroker : IHostedService
 {
     #region Ctor
-    private readonly string _hostname = "localhost";  // آدرس RabbitMQ
-    private readonly string _queueName = "dataQueue"; // نام صف
+    private readonly string _hostname = "localhost";
+    private readonly string _queueName = "dataQueue";
+    private const int _minuteInterval = 60 * 1000;
+
     private readonly ILogger<RabbitMQMessageBroker> _logger;
     private IConnection _connection;
     private IChannel _channel;
+    private readonly IServiceScopeFactory _serviceScopeFactory;
+
     private AsyncEventingBasicConsumer _consumer;
-    private readonly IServiceScopeFactory _serviceScopeFactory; // برای دسترسی به DbContext
-
-    // برای ذخیره داده‌ها در حافظه به صورت تجمعی
     private readonly List<DataPointPublishDTO> _dataBuffer = new List<DataPointPublishDTO>();
-
-    // تایمر برای ذخیره داده‌ها هر یک دقیقه
     private Timer _timer;
-    private const int _minuteInterval = 60 * 1000; // 1 دقیقه (در میلی‌ثانیه)
-
-
 
 
     public RabbitMQMessageBroker(ILogger<RabbitMQMessageBroker> logger, IServiceScopeFactory serviceScopeFactory)
@@ -40,6 +37,7 @@ public class RabbitMQMessageBroker : IHostedService
         _logger = logger;
         _serviceScopeFactory = serviceScopeFactory;
     }
+
     #endregion
 
 
@@ -151,7 +149,7 @@ public class RabbitMQMessageBroker : IHostedService
 
 
     // متد برای پردازش پیام‌های دریافتی
-    public async Task ProcessMessageAsync(string message, CancellationToken cancellationToken)
+    private async Task ProcessMessageAsync(string message, CancellationToken cancellationToken)
     {
         _logger.LogInformation($"Received message: {message}");
 
@@ -222,7 +220,35 @@ public class RabbitMQMessageBroker : IHostedService
 
                     };
 
-                    await context.DataRecords.AddAsync(newDataRecord);
+
+
+                    var recordisexist = await context.DataRecords.FirstOrDefaultAsync(d => d.Time == newDataRecord.Time);
+
+                    if (recordisexist != null)
+                    {
+
+                        recordisexist.DataPoint1Value = dataToSave[0].Value;
+                        recordisexist.DataPoint2Value = dataToSave[1].Value;
+                        recordisexist.DataPoint3Value = dataToSave[2].Value;
+                        recordisexist.DataPoint4Value = dataToSave[3].Value;
+                        recordisexist.DataPoint5Value = dataToSave[4].Value;
+                        recordisexist.DataPoint6Value = dataToSave[5].Value;
+                        recordisexist.DataPoint7Value = dataToSave[6].Value;
+                        recordisexist.DataPoint8Value = dataToSave[7].Value;
+                        recordisexist.DataPoint9Value = dataToSave[8].Value;
+                        recordisexist.DataPoint10Value = dataToSave[9].Value;
+
+
+                        context.DataRecords.Update(recordisexist);
+
+
+                    }
+                    else 
+                    {
+                        await context.DataRecords.AddAsync(newDataRecord);
+                    }
+
+         
                     _logger.LogInformation($"Data record saved to database at {newDataRecord.Time}");
                     await context.SaveChangesAsync();
                 }
@@ -237,5 +263,6 @@ public class RabbitMQMessageBroker : IHostedService
             _logger.LogError($"Error saving data to database: {ex.Message}");
         }
     }
+
 
 }

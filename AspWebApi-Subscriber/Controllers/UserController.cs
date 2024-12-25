@@ -33,7 +33,7 @@ public class UserController : ControllerBase
     public async Task<ActionResult> Register(UserRegisterDTO userRegisterDTO)
     {
 
-        _logger.LogInformation(" Attempt Register: " + userRegisterDTO.PhoneNumber);
+        _logger.LogInformation(" Attempt Register: " + userRegisterDTO.UserName);
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
@@ -45,8 +45,8 @@ public class UserController : ControllerBase
         if (userRegisterDTO.Password != userRegisterDTO.RePassword)
             return BadRequest("Password and repeat password are not the same");
 
-        //if (await _userService.IsPhoneNumberExist(userRegisterDTO.PhoneNumber)) //Check Phone Number Exist
-            return BadRequest("This mobile number is already registered");
+        ////if (await _userService.IsPhoneNumberExist(userRegisterDTO.PhoneNumber)) //Check Phone Number Exist
+        //    return BadRequest("This mobile number is already registered");
 
 
 

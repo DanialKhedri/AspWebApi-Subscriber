@@ -27,8 +27,6 @@ public class UserService : IUserService
     #endregion
 
 
-
-
     public async Task<bool> Register(UserRegisterDTO userRegisterDTO)
     {
         if (userRegisterDTO == null)
@@ -91,6 +89,7 @@ public class UserService : IUserService
             return null;
 
     }
+
 
 }
 

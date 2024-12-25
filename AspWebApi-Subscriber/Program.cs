@@ -1,4 +1,5 @@
-﻿using Application.Services.Implements;
+﻿#region Usings
+using Application.Services.Implements;
 using Application.Services.Interfaces;
 using Application.Utilities.AutoMapper;
 using Domain.Interfaces.IRepository;
@@ -10,21 +11,30 @@ using Microsoft.IdentityModel.Tokens;
 using MyProject.Infrastructure.RabbitMQ;
 using Serilog;
 using System.Text;
+#endregion
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Serilog پیکربندی
+builder.Services.AddControllers();
+builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
+
+#region Serilog
 string logDirectory = Path.Combine(Directory.GetCurrentDirectory(), "logs");
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()  // نوشتن به کنسول
     .WriteTo.File(Path.Combine(logDirectory, "log-.txt"), rollingInterval: RollingInterval.Day) 
     .CreateLogger();
-
 builder.Logging.ClearProviders();  
 builder.Logging.AddSerilog();
+#endregion
 
-//Add dbContext
+#region DBContext
+
 builder.Services.AddDbContext<DataContext>(option =>
 {
 
@@ -33,19 +43,13 @@ builder.Services.AddDbContext<DataContext>(option =>
 }
 );
 
+#endregion
 
-// Add services to the container.
-builder.Services.AddControllers();
-builder.Services.AddOpenApi();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-
-
-// AutoMapper
+#region AutoMapper
 builder.Services.AddAutoMapper(typeof(MapperConfig));
+#endregion
 
-// JWT Authentication
+#region JWT
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -64,21 +68,22 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["JWTSettings:Key"]))
     };
 });
+#endregion
 
 
-
-// افزودن سرویس‌های RabbitMQ به DI
 builder.Services.AddSingleton<IHostedService, RabbitMQMessageBroker>();
 
-
+//User Repositroy and Service
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+
 
 
 var app = builder.Build();
 
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
