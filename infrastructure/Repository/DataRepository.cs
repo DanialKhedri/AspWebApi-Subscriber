@@ -107,7 +107,6 @@ public class DataRepository : IDataRepository
     }
 
 
-
     // GET DataRecords By Specific Date, Hour, and Minute
     public async Task<IEnumerable<DataRecord>> GetDataBySpecificDateAndTimeAsync(DateTime specificDate)
     {
@@ -133,7 +132,6 @@ public class DataRepository : IDataRepository
 
         }
     }
-
 
 
 }

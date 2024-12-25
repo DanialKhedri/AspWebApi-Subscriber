@@ -2,6 +2,7 @@
 using Application.Utilities.PasswordHasher;
 using Domain.Interfaces.IRepository;
 using infrastructure.Data;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -62,10 +63,26 @@ public class UserRepository : IUserRepository
 
         if (user != null)
         {
-            var OriginUser = await _dataContext.Users.FirstOrDefaultAsync(u => u.UserName == user.UserName &&
-                                    u.Password == PasswordHasher.HashPassword(user.Password));
+
+
+            Domain.Entities.User? OriginUser = await _dataContext.Users
+                                                    .FirstOrDefaultAsync(u => u.UserName == user.UserName);
+
             if (OriginUser == null)
                 return null;
+
+
+
+            var passwordiscorrect = PasswordHasher.VerifyPassword(user.Password, OriginUser.Password);
+
+
+            if (!passwordiscorrect)
+                return null;
+
+
+
+
+
 
 
             // تولید Access Token
@@ -102,6 +119,8 @@ public class UserRepository : IUserRepository
         }
         else
             return null;
+
+
     }
 
 

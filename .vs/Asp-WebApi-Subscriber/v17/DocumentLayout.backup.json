@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\Projects\\Asp-WebApi-Subscriber\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|d:\\projects\\asp-webapi-subscriber\\application\\services\\implements\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|solutionrelative:application\\services\\implements\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|d:\\projects\\asp-webapi-subscriber\\application\\services\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|solutionrelative:application\\services\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\repository\\datarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\repository\\datarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F367687-F9AF-4278-835D-EB1CF74DAFCB}|Domain\\Domain.csproj|d:\\projects\\asp-webapi-subscriber\\domain\\interfaces\\irepository\\idatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F367687-F9AF-4278-835D-EB1CF74DAFCB}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\irepository\\idatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|d:\\projects\\asp-webapi-subscriber\\application\\services\\interfaces\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|solutionrelative:application\\services\\interfaces\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|d:\\projects\\asp-webapi-subscriber\\application\\utilities\\passwordhasher\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|solutionrelative:application\\utilities\\passwordhasher\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,105 +26,62 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DataController.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Controllers\\DataController.cs",
-              "RelativeDocumentMoniker": "AspWebApi-Subscriber\\Controllers\\DataController.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Controllers\\DataController.cs",
-              "RelativeToolTip": "AspWebApi-Subscriber\\Controllers\\DataController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwBgAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "AspWebApi-Subscriber\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Controllers\\UserController.cs",
+              "RelativeToolTip": "AspWebApi-Subscriber\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwEYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:39:44.149Z",
+              "WhenOpened": "2024-12-25T22:49:52.72Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DataService.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Services\\Implements\\DataService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\Implements\\DataService.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Services\\Implements\\DataService.cs",
-              "RelativeToolTip": "Application\\Services\\Implements\\DataService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Services\\Implements\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\Implements\\UserService.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Services\\Implements\\UserService.cs",
+              "RelativeToolTip": "Application\\Services\\Implements\\UserService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwCwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:29:03.212Z",
+              "WhenOpened": "2024-12-25T22:50:06.788Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IDataService.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Services\\Interfaces\\IDataService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\Interfaces\\IDataService.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Services\\Interfaces\\IDataService.cs",
-              "RelativeToolTip": "Application\\Services\\Interfaces\\IDataService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBwAAABiAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "infrastructure\\Repository\\UserRepository.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "infrastructure\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAA1wD8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:29:09.887Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Repository\\DataRepository.cs",
-              "RelativeDocumentMoniker": "infrastructure\\Repository\\DataRepository.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Repository\\DataRepository.cs",
-              "RelativeToolTip": "infrastructure\\Repository\\DataRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAqwAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:22:42.729Z",
+              "WhenOpened": "2024-12-25T22:49:58.081Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IDataRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\Domain\\Interfaces\\IRepository\\IDataRepository.cs",
-              "RelativeDocumentMoniker": "Domain\\Interfaces\\IRepository\\IDataRepository.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\Domain\\Interfaces\\IRepository\\IDataRepository.cs",
-              "RelativeToolTip": "Domain\\Interfaces\\IRepository\\IDataRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Utilities\\PasswordHasher\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Application\\Utilities\\PasswordHasher\\PasswordHasher.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Utilities\\PasswordHasher\\PasswordHasher.cs",
+              "RelativeToolTip": "Application\\Utilities\\PasswordHasher\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:23:04.528Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-12-25T22:53:33.777Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:7:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:8:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:7:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

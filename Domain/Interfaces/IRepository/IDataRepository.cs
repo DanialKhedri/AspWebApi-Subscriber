@@ -1,5 +1,4 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 
 namespace Domain.Interfaces.IRepository;
 
@@ -24,5 +23,4 @@ public interface IDataRepository
     public Task<IEnumerable<DataRecord>> GetDataBySpecificDateAndTimeAsync(DateTime specificDate);
 
   
-
 }
