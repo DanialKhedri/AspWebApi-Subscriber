@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Projects\\Asp-WebApi-Subscriber\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\messagebroker\\rabbitmqmessagebroker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\messagebroker\\rabbitmqmessagebroker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\messagebroker\\rabbitmqmessagebroker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\messagebroker\\rabbitmqmessagebroker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,29 +54,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\appsettings.json",
+              "RelativeDocumentMoniker": "AspWebApi-Subscriber\\appsettings.json",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\appsettings.json",
+              "RelativeToolTip": "AspWebApi-Subscriber\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-26T02:57:00.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "AspWebApi-Subscriber\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Controllers\\UserController.cs",
+              "RelativeToolTip": "AspWebApi-Subscriber\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwEYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T02:55:23.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "RabbitMQMessageBroker.cs",
               "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
               "RelativeDocumentMoniker": "infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
               "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
               "RelativeToolTip": "infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAkwJcAAABfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T01:48:55.645Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Dockerfile",
-              "RelativeDocumentMoniker": "AspWebApi-Subscriber\\Dockerfile",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Dockerfile",
-              "RelativeToolTip": "AspWebApi-Subscriber\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-26T01:38:37.532Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

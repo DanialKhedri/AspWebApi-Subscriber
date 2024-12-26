@@ -1,0 +1,47 @@
+2024-12-26 02:55:44.730 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2024-12-26 02:55:44.815 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2024-12-26 02:55:44.844 +00:00 [INF] Creating key {d5570bc2-2d0f-4038-9d1d-ea592ed3c8ce} with creation date 2024-12-26 02:55:44Z, activation date 2024-12-26 02:55:44Z, and expiration date 2025-03-26 02:55:44Z.
+2024-12-26 02:55:44.927 +00:00 [WRN] No XML encryptor configured. Key {d5570bc2-2d0f-4038-9d1d-ea592ed3c8ce} may be persisted to storage in unencrypted form.
+2024-12-26 02:55:45.151 +00:00 [INF] Starting RabbitMQ connection...
+2024-12-26 02:55:45.169 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:55:45.510 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 4. Error: None of the specified endpoints were reachable
+2024-12-26 02:55:50.512 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:55:50.595 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 3. Error: None of the specified endpoints were reachable
+2024-12-26 02:55:55.594 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:55:55.670 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 2. Error: None of the specified endpoints were reachable
+2024-12-26 02:56:00.670 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:56:00.747 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 1. Error: None of the specified endpoints were reachable
+2024-12-26 02:56:05.747 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:56:05.853 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 0. Error: None of the specified endpoints were reachable
+2024-12-26 02:56:06.266 +00:00 [ERR] Error starting RabbitMQ service: None of the specified endpoints were reachable
+2024-12-26 02:56:06.424 +00:00 [INF] Now listening on: http://[::]:8080
+2024-12-26 02:56:06.427 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-26 02:56:06.428 +00:00 [INF] Hosting environment: Development
+2024-12-26 02:56:06.429 +00:00 [INF] Content root path: /app
+2024-12-26 02:59:07.867 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2024-12-26 02:59:07.945 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2024-12-26 02:59:07.970 +00:00 [INF] Creating key {0144d150-3eec-4856-b5ef-afc658f57dbb} with creation date 2024-12-26 02:59:07Z, activation date 2024-12-26 02:59:07Z, and expiration date 2025-03-26 02:59:07Z.
+2024-12-26 02:59:08.041 +00:00 [WRN] No XML encryptor configured. Key {0144d150-3eec-4856-b5ef-afc658f57dbb} may be persisted to storage in unencrypted form.
+2024-12-26 02:59:08.104 +00:00 [INF] Starting RabbitMQ connection...
+2024-12-26 02:59:08.123 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:59:08.327 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 4. Error: None of the specified endpoints were reachable
+2024-12-26 02:59:13.329 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:59:13.420 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 3. Error: None of the specified endpoints were reachable
+2024-12-26 02:59:18.419 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:59:18.583 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 2. Error: None of the specified endpoints were reachable
+2024-12-26 02:59:23.578 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:59:23.714 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 1. Error: None of the specified endpoints were reachable
+2024-12-26 02:59:28.715 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 02:59:28.810 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 0. Error: None of the specified endpoints were reachable
+2024-12-26 02:59:29.178 +00:00 [ERR] Error starting RabbitMQ service: None of the specified endpoints were reachable
+2024-12-26 02:59:29.311 +00:00 [INF] Now listening on: http://[::]:8080
+2024-12-26 02:59:29.313 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-26 02:59:29.314 +00:00 [INF] Hosting environment: Development
+2024-12-26 02:59:29.314 +00:00 [INF] Content root path: /app
+2024-12-26 03:01:06.093 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2024-12-26 03:01:06.158 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2024-12-26 03:01:06.190 +00:00 [INF] Creating key {88dd390c-a983-40d7-94de-ea95145cc647} with creation date 2024-12-26 03:01:06Z, activation date 2024-12-26 03:01:06Z, and expiration date 2025-03-26 03:01:06Z.
+2024-12-26 03:01:06.239 +00:00 [WRN] No XML encryptor configured. Key {88dd390c-a983-40d7-94de-ea95145cc647} may be persisted to storage in unencrypted form.
+2024-12-26 03:01:06.286 +00:00 [INF] Starting RabbitMQ connection...
+2024-12-26 03:01:06.300 +00:00 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 03:01:06.511 +00:00 [ERR] Failed to connect to RabbitMQ. Retries left: 4. Error: None of the specified endpoints were reachable

@@ -1,0 +1,14 @@
+2024-12-26 05:39:10.818 +03:30 [INF] User profile is available. Using 'C:\Users\King-PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-26 05:39:11.043 +03:30 [INF] Starting RabbitMQ connection...
+2024-12-26 05:39:11.054 +03:30 [INF] Attempting to connect to RabbitMQ...
+2024-12-26 05:39:11.177 +03:30 [INF] Connection to RabbitMQ established.
+2024-12-26 05:39:11.188 +03:30 [INF] Channel created successfully.
+2024-12-26 05:39:11.200 +03:30 [INF] Queue declared successfully.
+2024-12-26 05:39:11.207 +03:30 [INF] RabbitMQ Service started and listening for messages.
+2024-12-26 05:39:11.246 +03:30 [INF] Now listening on: http://localhost:5000
+2024-12-26 05:39:11.249 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-26 05:39:11.250 +03:30 [INF] Hosting environment: Production
+2024-12-26 05:39:11.251 +03:30 [INF] Content root path: D:\Projects\Asp-WebApi-Subscriber\AspWebApi-Subscriber\bin\Debug\net9.0
+2024-12-26 05:40:11.214 +03:30 [INF] No new data to save to database.
+2024-12-26 05:41:11.213 +03:30 [INF] No new data to save to database.
+2024-12-26 05:42:11.210 +03:30 [INF] No new data to save to database.
