@@ -3,23 +3,8 @@
   "WorkspaceRootPath": "D:\\Projects\\Asp-WebApi-Subscriber\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\repository\\datarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\repository\\datarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./SubDB/True/SqlTable/dbo.DataRecords.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|d:\\projects\\asp-webapi-subscriber\\application\\services\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CBAB8B3-FAF2-43F1-B611-76A0D73FBCB0}|Application\\Application.csproj|solutionrelative:application\\services\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,69 +14,47 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Services\\Implements\\UserService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\Implements\\UserService.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\Application\\Services\\Implements\\UserService.cs",
-              "RelativeToolTip": "Application\\Services\\Implements\\UserService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T22:50:06.788Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Program.cs",
-              "RelativeDocumentMoniker": "AspWebApi-Subscriber\\Program.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Program.cs",
-              "RelativeToolTip": "AspWebApi-Subscriber\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwFEAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T01:25:59.614Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataController.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Controllers\\DataController.cs",
-              "RelativeDocumentMoniker": "AspWebApi-Subscriber\\Controllers\\DataController.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Controllers\\DataController.cs",
-              "RelativeToolTip": "AspWebApi-Subscriber\\Controllers\\DataController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T01:21:45.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.DataRecords [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/./SubDB/True/SqlTable/dbo.DataRecords.sql",
-              "ToolTip": "dbo.DataRecords [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-12-26T01:17:23.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DataRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Repository\\DataRepository.cs",
-              "RelativeDocumentMoniker": "infrastructure\\Repository\\DataRepository.cs",
-              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\Repository\\DataRepository.cs",
-              "RelativeToolTip": "infrastructure\\Repository\\DataRepository.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAuwEMAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T01:15:48.482Z",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Dockerfile",
+              "RelativeDocumentMoniker": "AspWebApi-Subscriber\\Dockerfile",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Dockerfile",
+              "RelativeToolTip": "AspWebApi-Subscriber\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-26T01:38:37.532Z",
               "EditorCaption": ""
             }
           ]
