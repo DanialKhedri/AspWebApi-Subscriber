@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AspWebApi-Subscriber")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee3843a306754daa45791a28c97bc8c72ff66425")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf98bed2e36453f0a1907117fd4a61e2d7b7a476")]
 [assembly: System.Reflection.AssemblyProductAttribute("AspWebApi-Subscriber")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AspWebApi-Subscriber")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

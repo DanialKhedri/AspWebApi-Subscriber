@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Projects\\Asp-WebApi-Subscriber\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|d:\\projects\\asp-webapi-subscriber\\infrastructure\\messagebroker\\rabbitmqmessagebroker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26373EA-5723-48FC-A953-58EADBFB7D0E}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\messagebroker\\rabbitmqmessagebroker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|d:\\projects\\asp-webapi-subscriber\\aspwebapi-subscriber\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{FB955C49-A7A5-4B1A-A592-4D6E2333528A}|AspWebApi-Subscriber\\AspWebApi-Subscriber.csproj|solutionrelative:aspwebapi-subscriber\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
@@ -47,6 +51,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RabbitMQMessageBroker.cs",
+              "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
+              "RelativeDocumentMoniker": "infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
+              "ToolTip": "D:\\Projects\\Asp-WebApi-Subscriber\\infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
+              "RelativeToolTip": "infrastructure\\MessageBroker\\RabbitMQMessageBroker.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAkwJcAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T01:48:55.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Projects\\Asp-WebApi-Subscriber\\AspWebApi-Subscriber\\Dockerfile",
               "RelativeDocumentMoniker": "AspWebApi-Subscriber\\Dockerfile",

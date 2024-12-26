@@ -151,7 +151,7 @@ public class RabbitMQMessageBroker : IHostedService
     // متد برای پردازش پیام‌های دریافتی
     private async Task ProcessMessageAsync(string message, CancellationToken cancellationToken)
     {
-        _logger.LogInformation($"Received message: {message}");
+       
 
         try
         {
@@ -165,7 +165,7 @@ public class RabbitMQMessageBroker : IHostedService
                 {
                     _dataBuffer.AddRange(dataPoints);
                 }
-                _logger.LogInformation($"Added {dataPoints.Count} data points to buffer.");
+             
             }
             else
             {
