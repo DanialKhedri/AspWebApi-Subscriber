@@ -87,7 +87,7 @@ public class DataController : ControllerBase
     }
 
 
-    // GET /api/data/specific-date? year = 2023 & month = 12 & day = 25
+    // GET /api/data/specific-date?year=2024&month=12&day=26
     // GET api/data/specific-date?year={year}&month={month}&day={day}
     [Authorize]
     [HttpGet("specific-date")]
@@ -109,8 +109,8 @@ public class DataController : ControllerBase
     }
 
 
-    // GET /api/data/specific-date-time? date = 2023 - 12 - 25T14:30:00
-    // GET api/data/specific-date-time?date={specificDate}
+
+    // GET /api/data/specific-date-time?specificDate=2024-12-26T04:41:42
     [Authorize]
     [HttpGet("specific-date-time")]
     public async Task<IActionResult> GetDataBySpecificDateAndTimeAsync(DateTime specificDate)

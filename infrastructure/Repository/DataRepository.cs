@@ -11,8 +11,8 @@ public class DataRepository : IDataRepository
 
     #region Ctor
     private readonly DataContext _context;
-    private readonly ILogger logger;
-    public DataRepository(DataContext context, ILogger logger)
+    private readonly ILogger<DataRepository> logger;
+    public DataRepository(DataContext context, ILogger<DataRepository> logger)
     {
         _context = context;
         this.logger = logger;

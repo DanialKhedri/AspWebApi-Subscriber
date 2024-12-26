@@ -77,6 +77,9 @@ builder.Services.AddSingleton<IHostedService, RabbitMQMessageBroker>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+//Data Repository And Service
+builder.Services.AddScoped<IDataRepository, DataRepository>();
+builder.Services.AddScoped<IDataService, DataService>();
 
 
 
